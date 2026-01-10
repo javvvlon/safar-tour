@@ -1,0 +1,145 @@
+import { CheckCircle, Users, Globe, Award, ThumbsUp } from "lucide-react";
+import { motion } from "framer-motion";
+
+const features = [
+    "2 yildan ortiq tajriba",
+    "Ishonchli va sifatli xizmat",
+    "Raqobatbardosh narxlar",
+    "Shaxsiy yondashuv",
+    "Tez va oson bron qilish",
+    "24/7 mijozlarga yordam",
+];
+
+const stats = [
+    { icon: Users, value: "100+", label: "Mamnun mijozlar" },
+    { icon: Globe, value: "20+", label: "Mamlakatlar" },
+    { icon: Award, value: "2+", label: "Yillik tajriba" },
+    { icon: ThumbsUp, value: "99%", label: "Ijobiy fikrlar" },
+];
+
+const About = () => {
+    return (
+        <section id="haqimizda" className="py-24 bg-muted/30 relative overflow-hidden">
+            {/* Decorative */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    {/* Image Section */}
+                    <motion.div
+                        className="relative"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <div className="relative z-10">
+                            <motion.img
+                                src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&h=500&fit=crop"
+                                alt="Sayohat"
+                                className="rounded-3xl shadow-2xl w-full"
+                                whileHover={{ scale: 1.02 }}
+                                transition={{ duration: 0.3 }}
+                            />
+
+                            {/* Floating Card */}
+                            <motion.div
+                                className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl max-w-[200px]"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.4 }}
+                                animate={{ y: [0, -10, 0] }}
+                            >
+                                <div className="text-4xl font-bold text-primary mb-1">2+</div>
+                                <div className="text-muted-foreground text-sm">Yillik tajriba va minglab mamnun mijozlar</div>
+                            </motion.div>
+                        </div>
+
+                        <div className="absolute -bottom-6 -left-6 w-72 h-72 bg-primary/10 rounded-3xl -z-0" />
+                        <div className="absolute -top-6 -right-6 w-32 h-32 bg-secondary/20 rounded-3xl -z-0" />
+                    </motion.div>
+
+                    {/* Content Section */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+              Biz haqimizda
+            </span>
+                        <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+                            Nima uchun <span className="text-primary">Safar Travel?</span>
+                        </h2>
+                        <p className="text-muted-foreground mb-6 text-lg leading-relaxed">
+                            Safar Travel - bu O'zbekistondagi eng ishonchli sayohat
+                            agentliklaridan biri. Biz 2 yildan ortiq vaqt davomida minglab
+                            insonlarga ularning orzu qilgan sayohatlarini amalga oshirishga
+                            yordam berdik.
+                        </p>
+                        <p className="text-muted-foreground mb-8 leading-relaxed">
+                            Bizning professional jamoamiz har bir mijozga individual
+                            yondashuv bilan xizmat ko'rsatadi va sizning barcha talablaringiz
+                            va istaklaringizni hisobga olgan holda eng yaxshi takliflarni
+                            taqdim etadi.
+                        </p>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                            {features.map((feature, index) => (
+                                <motion.div
+                                    key={index}
+                                    className="flex items-center gap-3 bg-white/80 backdrop-blur-sm p-3 rounded-xl"
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.4, delay: 0.1 * index }}
+                                    whileHover={{ x: 5 }}
+                                >
+                                    <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <CheckCircle className="w-4 h-4 text-primary" />
+                                    </div>
+                                    <span className="text-foreground font-medium">{feature}</span>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </motion.div>
+                </div>
+
+                {/* Stats Section */}
+                <motion.div
+                    className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    {stats.map((stat, index) => (
+                        <motion.div
+                            key={index}
+                            className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 text-center group hover:shadow-lg transition-all duration-300"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: 0.1 * index }}
+                            whileHover={{ y: -5 }}
+                        >
+                            <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
+                                <stat.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                            </div>
+                            <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
+                                {stat.value}
+                            </div>
+                            <div className="text-muted-foreground text-sm">
+                                {stat.label}
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </div>
+        </section>
+    );
+};
+
+export default About;
