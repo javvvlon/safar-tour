@@ -1,4 +1,4 @@
-import { CheckCircle, Users, Globe, Award, ThumbsUp } from "lucide-react";
+import { CheckCircle} from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext";
 
