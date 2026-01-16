@@ -1,24 +1,7 @@
 import { MapPin, Clock, Star, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { motion } from "framer-motion";
 import { useLanguage } from "../i18n/LanguageContext";
-const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.15 },
-    },
-};
-
-const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.1 },
-    },
-};
 
 const Destinations = () => {
     const { t } = useLanguage();
@@ -82,13 +65,7 @@ const Destinations = () => {
             <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/3 rounded-full blur-3xl -translate-y-1/2" />
 
             <div className="container mx-auto px-4 relative z-10">
-                <motion.div
-                    className="flex flex-col md:flex-row md:items-end md:justify-between mb-16"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0 }}
-                >
+                <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
                     <div>
                         <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                           {t.destinations.badge}
@@ -107,73 +84,68 @@ const Destinations = () => {
                         {t.destinations.viewAll}
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {destinations.map((destination, index) => (
-                        <motion.div key={index} variants={cardVariants}>
-                            <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 bg-white hover:-translate-y-3 cursor-pointer">
-                                <div className="relative overflow-hidden">
-                                    <img
-                                        src={destination.image}
-                                        alt={destination.name}
-                                        className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <Card
+                            key={index}
+                            className="group overflow-hidden hover:shadow-2xl transition-all duration-300 border-0 bg-white hover:-translate-y-3 cursor-pointer"
+                        >
+                            <div className="relative overflow-hidden">
+                                <img
+                                    src={destination.image}
+                                    alt={destination.name}
+                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                                    {/* Price Badge */}
-                                    <div className="absolute top-4 right-4 bg-white text-foreground px-4 py-2 rounded-xl text-lg font-bold shadow-lg">
-                                        ${destination.price}
-                                    </div>
-
-                                    {/* Hot Badge */}
-                                    {destination.hot && (
-                                        <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase animate-pulse">
-                                            🔥 {t.destinations.hot}
-                                        </div>
-                                    )}
-
-                                    {/* Rating */}
-                                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium flex items-center gap-1.5 shadow-lg">
-                                        <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                                        <span className="font-bold">{destination.rating}</span>
-                                    </div>
+                                {/* Price Badge */}
+                                <div className="absolute top-4 right-4 bg-white text-foreground px-4 py-2 rounded-xl text-lg font-bold shadow-lg">
+                                    ${destination.price}
                                 </div>
-                                <CardContent className="p-6">
-                                    <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
-                                        <MapPin className="w-4 h-4 text-primary" />
-                                        {destination.country}
+
+                                {/* Hot Badge */}
+                                {destination.hot && (
+                                    <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase">
+                                        🔥 {t.destinations.hot}
                                     </div>
-                                    <h3 className="text-xl font-bold text-card-foreground mb-2 group-hover:text-primary transition-colors">
-                                        {destination.name}
-                                    </h3>
-                                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                                        {destination.description}
-                                    </p>
-                                    <div className="flex items-center justify-between pt-4 border-t border-border">
-                                        <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                                            <Clock className="w-4 h-4" />
-                                            {destination.duration} {t.destinations.days}
-                                        </div>
-                                        <Button
-                                            size="sm"
-                                            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl group/btn"
-                                        >
-                                            {t.destinations.details}
-                                            <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                                        </Button>
+                                )}
+
+                                {/* Rating */}
+                                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-sm font-medium flex items-center gap-1.5 shadow-lg">
+                                    <Star className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                                    <span className="font-bold">{destination.rating}</span>
+                                </div>
+                            </div>
+                            <CardContent className="p-6">
+                                <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
+                                    <MapPin className="w-4 h-4 text-primary" />
+                                    {destination.country}
+                                </div>
+                                <h3 className="text-xl font-bold text-card-foreground mb-2 group-hover:text-primary transition-colors">
+                                    {destination.name}
+                                </h3>
+                                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                                    {destination.description}
+                                </p>
+                                <div className="flex items-center justify-between pt-4 border-t border-border">
+                                    <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                                        <Clock className="w-4 h-4" />
+                                        {destination.duration} {t.destinations.days}
                                     </div>
-                                </CardContent>
-                            </Card>
-                        </motion.div>
+                                    <Button
+                                        size="sm"
+                                        className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl group/btn"
+                                    >
+                                        {t.destinations.details}
+                                        <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                                    </Button>
+                                </div>
+                            </CardContent>
+                        </Card>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
