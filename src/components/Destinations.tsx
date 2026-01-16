@@ -2,12 +2,14 @@ import { MapPin, Clock, Star, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { useLanguage } from "../i18n/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Destinations = () => {
     const { t } = useLanguage();
 
     const destinations = [
         {
+            slug: "sharm-el-sheikh",
             name: "Sharm el Sheikh",
             country: t.destinations.items.sharm.country,
             image: "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&h=400&fit=crop",
@@ -18,6 +20,7 @@ const Destinations = () => {
             hot: true,
         },
         {
+            slug: "thailand",
             name: "Thailand",
             country: t.destinations.items.thailand.country,
             image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&h=400&fit=crop",
@@ -28,16 +31,29 @@ const Destinations = () => {
             hot: false,
         },
         {
-            name: "Turkey",
-            country: t.destinations.items.turkey.country,
+            slug: "istanbul",
+            name: "Istanbul",
+            country: t.destinations.items.istanbul.country,
             image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=600&h=400&fit=crop",
             price: "350",
-            duration: 0,
-            rating: 4.7,
-            description: t.destinations.items.turkey.description,
+            duration: 5,
+            rating: 4.8,
+            description: t.destinations.items.istanbul.description,
             hot: true,
         },
         {
+            slug: "antalya",
+            name: "Antalya",
+            country: t.destinations.items.antalya.country,
+            image: "https://images.unsplash.com/photo-1589561454226-796a8aa89b05?w=600&h=400&fit=crop",
+            price: "320",
+            duration: 7,
+            rating: 4.7,
+            description: t.destinations.items.antalya.description,
+            hot: false,
+        },
+        {
+            slug: "dubai",
             name: "Dubai",
             country: t.destinations.items.dubai.country,
             image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
@@ -48,6 +64,7 @@ const Destinations = () => {
             hot: false,
         },
         {
+            slug: "vietnam",
             name: "Vietnam",
             country: t.destinations.items.vietnam.country,
             image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop",
@@ -134,13 +151,15 @@ const Destinations = () => {
                                         <Clock className="w-4 h-4" />
                                         {destination.duration} {t.destinations.days}
                                     </div>
-                                    <Button
-                                        size="sm"
-                                        className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl group/btn"
-                                    >
-                                        {t.destinations.details}
-                                        <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                                    </Button>
+                                    <Link to={`/destination/${destination.slug}`}>
+                                        <Button
+                                            size="sm"
+                                            className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl group/btn"
+                                        >
+                                            {t.destinations.details}
+                                            <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                                        </Button>
+                                    </Link>
                                 </div>
                             </CardContent>
                         </Card>

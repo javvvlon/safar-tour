@@ -39,7 +39,7 @@ const Header = () => {
             }`}>
                 <div className="flex items-center gap-2">
                     <img
-                        src="./logo.png"
+                        src="../logo.png"
                         alt="Safar Travel"
                         className={`w-auto transition-all duration-500 ${isScrolled ? "h-10" : "h-12"}`}
                     />

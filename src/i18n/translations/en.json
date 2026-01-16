@@ -71,9 +71,13 @@
         "country": "Thailand",
         "description": "Experience tropical islands, exotic cuisine and rich culture."
       },
-      "turkey": {
+      "istanbul": {
         "country": "Turkey",
-        "description": "Mediterranean coast, historical sites and delicious Turkish cuisine."
+        "description": "Historic city bridging Europe and Asia with stunning mosques, bazaars and Bosphorus views."
+      },
+      "antalya": {
+        "country": "Turkey",
+        "description": "Mediterranean paradise with all-inclusive resorts, ancient ruins and beautiful beaches."
       },
       "dubai": {
         "country": "UAE",
@@ -85,15 +89,73 @@
       }
     }
   },
+  "destinationPage": {
+    "notFound": "Destination not found",
+    "backHome": "Back to home",
+    "backToDestinations": "Back to destinations",
+    "highlights": "Highlights",
+    "included": "What's included",
+    "highlightsList": {
+      "snorkeling": "Snorkeling",
+      "redSea": "Red Sea",
+      "pyramids": "Pyramids",
+      "desert": "Desert Safari",
+      "islands": "Tropical Islands",
+      "temples": "Buddhist Temples",
+      "cuisine": "Local Cuisine",
+      "beaches": "White Sand Beaches",
+      "allInclusive": "All Inclusive",
+      "mediterranean": "Mediterranean Sea",
+      "bazaars": "Grand Bazaar",
+      "hamam": "Turkish Hammam",
+      "burjKhalifa": "Burj Khalifa",
+      "desertSafari": "Desert Safari",
+      "shopping": "Luxury Shopping",
+      "luxury": "Luxury Hotels",
+      "halongBay": "Halong Bay",
+      "hoi_an": "Hoi An City",
+      "culture": "Rich Culture",
+      "bosphorus": "Bosphorus Cruise",
+      "mosques": "Historic Mosques",
+      "oldTown": "Old Town Kaleiçi"
+    },
+    "includedList": {
+      "flight": "Flight tickets",
+      "hotel": "Hotel accommodation",
+      "transfer": "Airport transfer",
+      "breakfast": "Breakfast",
+      "guide": "Professional guide",
+      "visa": "Visa processing",
+      "allMeals": "All meals",
+      "cityTour": "City tour"
+    },
+    "form": {
+      "title": "Book your trip",
+      "date": "Date",
+      "selectDate": "Select a date",
+      "adults": "Adults",
+      "kids": "Kids",
+      "days": "Number of days",
+      "firstName": "First name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Enter your last name",
+      "submit": "Check Date",
+      "errorTitle": "Error",
+      "errorName": "Please enter your first and last name",
+      "successTitle": "Thank you!",
+      "successMessage": "Thanks for your interest! We will contact you soon."
+    }
+  },
   "about": {
     "badge": "About us",
     "title1": "Why",
     "title2": "Safar Travel?",
-    "description1": "Safar Travel is one of the most trusted travel agencies in Uzbekistan. For over 10 years, we have helped thousands of people make their dream trips come true.",
+    "description1": "Safar Travel is one of the most trusted travel agencies in Uzbekistan. For over 2 years, we have helped thousands of people make their dream trips come true.",
     "description2": "Our professional team serves each client with an individual approach and offers the best deals taking into account all your requirements and preferences.",
     "floatingCard": "Years of experience and thousands of satisfied customers",
     "features": {
-      "experience": "Over 10 years of experience",
+      "experience": "Over 2 years of experience",
       "quality": "Reliable and quality service",
       "prices": "Competitive prices",
       "personal": "Personal approach",

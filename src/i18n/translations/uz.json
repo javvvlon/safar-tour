@@ -71,9 +71,13 @@
         "country": "Tailand",
         "description": "Tropik orollar, ekzotik oshxona va boy madaniyat bilan tanishing."
       },
-      "turkey": {
+      "istanbul": {
         "country": "Turkiya",
-        "description": "O'rta er dengizi sohili, tarixiy joylar va mazali turkcha taomlari."
+        "description": "Yevropa va Osiyoni birlashtiruvchi tarixiy shahar - masjidlar, bozorlar va Bosfor manzaralari."
+      },
+      "antalya": {
+        "country": "Turkiya",
+        "description": "O'rta er dengizi jannatida hamma narsa kiruvchi kurortlar, qadimiy yodgorliklar va go'zal plyajlar."
       },
       "dubai": {
         "country": "BAA",
@@ -85,15 +89,73 @@
       }
     }
   },
+  "destinationPage": {
+    "notFound": "Manzil topilmadi",
+    "backHome": "Bosh sahifaga",
+    "backToDestinations": "Manzillarga qaytish",
+    "highlights": "Diqqatga sazovor joylar",
+    "included": "Narxga kiritilgan",
+    "highlightsList": {
+      "snorkeling": "Snorkeling",
+      "redSea": "Qizil dengiz",
+      "pyramids": "Piramidalar",
+      "desert": "Cho'l safari",
+      "islands": "Tropik orollar",
+      "temples": "Buddist ibodatxonalari",
+      "cuisine": "Mahalliy taomlar",
+      "beaches": "Oq qumli plyajlar",
+      "allInclusive": "Hammasi kiritilgan",
+      "mediterranean": "O'rta er dengizi",
+      "bazaars": "Grand bozor",
+      "hamam": "Turk hammomi",
+      "burjKhalifa": "Burj Xalifa",
+      "desertSafari": "Cho'l safari",
+      "shopping": "Hashamatli xarid",
+      "luxury": "Lyuks mehmonxonalar",
+      "halongBay": "Xalong ko'rfazi",
+      "hoi_an": "Xoy An shahri",
+      "culture": "Boy madaniyat",
+      "bosphorus": "Bosfor sayohati",
+      "mosques": "Tarixiy masjidlar",
+      "oldTown": "Qadimiy Kaleichi"
+    },
+    "includedList": {
+      "flight": "Avia chipta",
+      "hotel": "Mehmonxona",
+      "transfer": "Transfer",
+      "breakfast": "Nonushta",
+      "guide": "Professional gid",
+      "visa": "Viza rasmiylash",
+      "allMeals": "Barcha ovqatlar",
+      "cityTour": "Shahar sayohati"
+    },
+    "form": {
+      "title": "Sayohatni band qiling",
+      "date": "Sana",
+      "selectDate": "Sanani tanlang",
+      "adults": "Kattalar",
+      "kids": "Bolalar",
+      "days": "Kunlar soni",
+      "firstName": "Ism",
+      "firstNamePlaceholder": "Ismingizni kiriting",
+      "lastName": "Familiya",
+      "lastNamePlaceholder": "Familiyangizni kiriting",
+      "submit": "Sanani tekshirish",
+      "errorTitle": "Xatolik",
+      "errorName": "Iltimos, ism va familiyangizni kiriting",
+      "successTitle": "Rahmat!",
+      "successMessage": "Qiziqishingiz uchun rahmat! Biz tez orada siz bilan bog'lanamiz."
+    }
+  },
   "about": {
     "badge": "Biz haqimizda",
     "title1": "Nima uchun",
     "title2": "Safar Travel?",
-    "description1": "Safar Travel - bu O'zbekistondagi eng ishonchli sayohat agentliklaridan biri. Biz 10 yildan ortiq vaqt davomida minglab insonlarga ularning orzu qilgan sayohatlarini amalga oshirishga yordam berdik.",
+    "description1": "Safar Travel - bu O'zbekistondagi eng ishonchli sayohat agentliklaridan biri. Biz 2 yildan ortiq vaqt davomida minglab insonlarga ularning orzu qilgan sayohatlarini amalga oshirishga yordam berdik.",
     "description2": "Bizning professional jamoamiz har bir mijozga individual yondashuv bilan xizmat ko'rsatadi va sizning barcha talablaringiz va istaklaringizni hisobga olgan holda eng yaxshi takliflarni taqdim etadi.",
     "floatingCard": "Yillik tajriba va minglab mamnun mijozlar",
     "features": {
-      "experience": "10 yildan ortiq tajriba",
+      "experience": "2 yildan ortiq tajriba",
       "quality": "Ishonchli va sifatli xizmat",
       "prices": "Raqobatbardosh narxlar",
       "personal": "Shaxsiy yondashuv",

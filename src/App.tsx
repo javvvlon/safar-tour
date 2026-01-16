@@ -7,6 +7,7 @@ import { Toaster } from "./components/ui/toaster";
 
 import Index from "./views/Index";
 import { LanguageProvider } from "./i18n/LanguageContext";
+import Destination from "./views/Destination";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Index />} />
+                        <Route path="/destination/:destination" element={<Destination />} />
                     </Routes>
                 </BrowserRouter>
             </TooltipProvider>
