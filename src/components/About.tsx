@@ -36,7 +36,7 @@ const About = () => {
                         initial={{opacity: 0, x: -50}}
                         whileInView={{opacity: 1, x: 0}}
                         viewport={{once: true}}
-                        transition={{duration: 0.8}}
+                        transition={{duration: 0}}
                     >
                         <div className="relative z-10">
                             <motion.img
@@ -44,7 +44,7 @@ const About = () => {
                                 alt="Sayohat"
                                 className="rounded-3xl shadow-2xl w-full"
                                 whileHover={{scale: 1.02}}
-                                transition={{duration: 0.3}}
+                                transition={{duration: 0}}
                             />
 
                             {/* Floating Card */}
@@ -53,7 +53,7 @@ const About = () => {
                                 initial={{opacity: 0, y: 30}}
                                 whileInView={{opacity: 1, y: 0}}
                                 viewport={{once: true}}
-                                transition={{duration: 0.6, delay: 0.4}}
+                                transition={{duration: 0, delay: 0.4}}
                                 animate={{y: [0, -10, 0]}}
                             >
                                 <div className="text-4xl font-bold text-primary mb-1">2+</div>
@@ -72,7 +72,7 @@ const About = () => {
                         initial={{opacity: 0, x: 50}}
                         whileInView={{opacity: 1, x: 0}}
                         viewport={{once: true}}
-                        transition={{duration: 0.8, delay: 0.2}}
+                        transition={{duration: 0, delay: 0.2}}
                     >
                         <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                           {t.about.badge}
@@ -95,7 +95,7 @@ const About = () => {
                                     initial={{opacity: 0, x: 20}}
                                     whileInView={{opacity: 1, x: 0}}
                                     viewport={{once: true}}
-                                    transition={{duration: 0.4, delay: 0.1 * index}}
+                                    transition={{duration: 0, delay: 0.1 * index}}
                                     whileHover={{x: 5}}
                                 >
                                     <div className="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -114,7 +114,7 @@ const About = () => {
                     initial={{opacity: 0, y: 30}}
                     whileInView={{opacity: 1, y: 0}}
                     viewport={{once: true}}
-                    transition={{duration: 0.6}}
+                    transition={{duration: 0}}
                 >
                     {stats.map((stat, index) => (
                         <motion.div
@@ -123,7 +123,7 @@ const About = () => {
                             initial={{opacity: 0, scale: 0.9}}
                             whileInView={{opacity: 1, scale: 1}}
                             viewport={{once: true}}
-                            transition={{duration: 0.4, delay: 0.1 * index}}
+                            transition={{duration: 0, delay: 0.1 * index}}
                             whileHover={{y: -5}}
                         >
                             <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">

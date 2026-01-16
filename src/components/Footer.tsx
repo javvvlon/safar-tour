@@ -29,7 +29,7 @@ const Footer = () => {
                         initial={{opacity: 0, y: 30}}
                         whileInView={{opacity: 1, y: 0}}
                         viewport={{once: true}}
-                        transition={{duration: 0.6}}
+                        transition={{duration: 0.1}}
                     >
                         <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-4">
                           {t.footer.badge}
@@ -50,7 +50,7 @@ const Footer = () => {
                                 initial={{opacity: 0, y: 20}}
                                 whileInView={{opacity: 1, y: 0}}
                                 viewport={{once: true}}
-                                transition={{duration: 0.4, delay: index * 0.1}}
+                                transition={{duration: 0.1, delay: index * 0.1}}
                             >
                                 <div className="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors duration-300">
                                     <item.icon className="w-5 h-5 text-primary group-hover:text-white transition-colors duration-300" />
@@ -74,7 +74,7 @@ const Footer = () => {
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         viewport={{once: true}}
-                        transition={{duration: 0.6, delay: 0.4}}
+                        transition={{duration: 0.2, delay: 0.4}}
                     >
                         <p className="text-white/50 text-sm mb-4">{t.footer.socialMedia}</p>
                         <div className="flex gap-4">

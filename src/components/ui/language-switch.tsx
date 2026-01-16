@@ -1,7 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
-
 import { type Language, useLanguage } from "../../i18n/LanguageContext";
 
 const languages: { code: Language; label: string; flag: string }[] = [

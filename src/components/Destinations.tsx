@@ -16,7 +16,7 @@ const cardVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6 },
+        transition: { duration: 0.1 },
     },
 };
 
@@ -29,7 +29,7 @@ const Destinations = () => {
             country: t.destinations.items.sharm.country,
             image: "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&h=400&fit=crop",
             price: "450",
-            duration: 7,
+            duration: 0,
             rating: 4.8,
             description: t.destinations.items.sharm.description,
             hot: true,
@@ -39,7 +39,7 @@ const Destinations = () => {
             country: t.destinations.items.thailand.country,
             image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&h=400&fit=crop",
             price: "850",
-            duration: 10,
+            duration: 0,
             rating: 4.9,
             description: t.destinations.items.thailand.description,
             hot: false,
@@ -49,7 +49,7 @@ const Destinations = () => {
             country: t.destinations.items.turkey.country,
             image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=600&h=400&fit=crop",
             price: "350",
-            duration: 7,
+            duration: 0,
             rating: 4.7,
             description: t.destinations.items.turkey.description,
             hot: true,
@@ -59,7 +59,7 @@ const Destinations = () => {
             country: t.destinations.items.dubai.country,
             image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
             price: "750",
-            duration: 5,
+            duration: 0,
             rating: 4.9,
             description: t.destinations.items.dubai.description,
             hot: false,
@@ -69,7 +69,7 @@ const Destinations = () => {
             country: t.destinations.items.vietnam.country,
             image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop",
             price: "700",
-            duration: 12,
+            duration: 0,
             rating: 4.8,
             description: t.destinations.items.vietnam.description,
             hot: false,
@@ -87,7 +87,7 @@ const Destinations = () => {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0 }}
                 >
                     <div>
                         <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">

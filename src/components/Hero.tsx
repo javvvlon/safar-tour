@@ -35,22 +35,22 @@ const Hero = () => {
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <motion.div
                     animate={{ x: [0, 50, 0] }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 0.2, repeat: Infinity, ease: "linear" }}
                     className="absolute top-20 -left-20 w-96 h-40 bg-white/80 rounded-full blur-3xl"
                 />
                 <motion.div
                     animate={{ x: [0, -30, 0] }}
-                    transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 0.3, repeat: Infinity, ease: "linear" }}
                     className="absolute top-40 right-0 w-[500px] h-48 bg-white/70 rounded-full blur-3xl"
                 />
                 <motion.div
                     animate={{ x: [0, 40, 0] }}
-                    transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 0.4, repeat: Infinity, ease: "linear" }}
                     className="absolute bottom-20 left-1/4 w-[600px] h-60 bg-white/90 rounded-full blur-3xl"
                 />
                 <motion.div
                     animate={{ x: [0, -20, 0] }}
-                    transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+                    transition={{ duration: 0.2, repeat: Infinity, ease: "linear" }}
                     className="absolute bottom-0 right-1/4 w-[400px] h-40 bg-white/80 rounded-full blur-3xl"
                 />
             </div>
@@ -61,14 +61,14 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        transition={{ duration: 0, ease: "easeOut" }}
                         className="text-left"
                     >
                         <motion.h1
                             className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight"
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
+                            transition={{ duration: 0.1, delay: 0.2 }}
                         >
                             {t.hero.title1}
                             <br />
@@ -79,7 +79,7 @@ const Hero = () => {
                             className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
+                            transition={{ duration: 0.1, delay: 0.4 }}
                         >
                             {t.hero.description}
                         </motion.p>
@@ -87,7 +87,7 @@ const Hero = () => {
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6 }}
+                            transition={{ duration: 0.1, delay: 0.6 }}
                         >
                             <Button
                                 size="lg"
@@ -103,7 +103,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, x: 100, rotate: 5 }}
                         animate={{ opacity: 1, x: 0, rotate: 0 }}
-                        transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                        transition={{ duration: 0, delay: 0.3, ease: "easeOut" }}
                         className="relative"
                     >
                         <motion.img
@@ -111,14 +111,14 @@ const Hero = () => {
                             alt="Airplane"
                             className="w-full max-w-2xl mx-auto drop-shadow-2xl rounded-3xl"
                             animate={{ y: [0, -15, 0] }}
-                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            transition={{ duration: 0, repeat: Infinity, ease: "easeInOut" }}
                         />
 
                         {/* Floating Badge */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5, delay: 1 }}
+                            transition={{ duration: 0, delay: 1 }}
                             className="absolute top-4 right-4 lg:top-8 lg:right-0 bg-foreground text-background rounded-full w-20 h-20 lg:w-24 lg:h-24 flex flex-col items-center justify-center shadow-xl animate-float"
                         >
                             <span className="text-2xl lg:text-3xl font-bold">50+</span>
@@ -132,14 +132,14 @@ const Hero = () => {
                     className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 lg:mt-0"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
+                    transition={{ duration: 0, delay: 0.8 }}
                 >
                     {features.map((feature, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 1 + index * 0.1 }}
+                            transition={{ duration: 0, delay: 1 + index * 0.1 }}
                             whileHover={{ y: -5, transition: { duration: 0.2 } }}
                             className="flex flex-col items-center gap-3 p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/50 shadow-sm hover:shadow-md transition-shadow cursor-pointer"
                         >

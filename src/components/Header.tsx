@@ -31,7 +31,7 @@ const Header = () => {
         <motion.header
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0, ease: "easeOut" }}
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
                 isScrolled
                     ? "top-3 left-4 right-4 mx-auto max-w-6xl bg-white/95 backdrop-blur-md rounded-2xl shadow-lg border border-white/50"
@@ -44,7 +44,7 @@ const Header = () => {
                 <motion.div
                     className="flex items-center gap-2"
                     whileHover={{ scale: 1.02 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0 }}
                 >
                     <img
                         src="./logo.png"
