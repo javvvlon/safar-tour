@@ -92,6 +92,7 @@ const Destination = () => {
     const [days, setDays] = useState(7);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [phone, setPhone] = useState("");
     const [selectedImage, setSelectedImage] = useState(0);
 
     const destKey = destination?.toLowerCase().replace(/ /g, "-") || "";
@@ -380,6 +381,15 @@ const Destination = () => {
                                         placeholder={t.destinationPage.form.lastNamePlaceholder}
                                         value={lastName}
                                         onChange={(e) => setLastName(e.target.value)}
+                                    />
+                                </div>
+
+                                <div className="space-y-2">
+                                    <Label>{t.destinationPage.form.phone}</Label>
+                                    <Input
+                                        placeholder={t.destinationPage.form.phonePlaceholder}
+                                        value={phone}
+                                        onChange={(e) => setPhone(e.target.value)}
                                     />
                                 </div>
                             </div>

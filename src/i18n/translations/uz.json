@@ -140,6 +140,8 @@
       "firstNamePlaceholder": "Ismingizni kiriting",
       "lastName": "Familiya",
       "lastNamePlaceholder": "Familiyangizni kiriting",
+      "phone": "Telefon raqam",
+      "phonePlaceholder": "Telefon raqamingizni kiriting",
       "submit": "Sanani tekshirish",
       "errorTitle": "Xatolik",
       "errorName": "Iltimos, ism va familiyangizni kiriting",

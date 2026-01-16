@@ -140,6 +140,8 @@
       "firstNamePlaceholder": "Введите ваше имя",
       "lastName": "Фамилия",
       "lastNamePlaceholder": "Введите вашу фамилию",
+      "phone": "Номер телефона",
+      "phonePlaceholder": "Введите номер телефона",
       "submit": "Проверить дату",
       "errorTitle": "Ошибка",
       "errorName": "Пожалуйста, введите имя и фамилию",

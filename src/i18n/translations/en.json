@@ -140,6 +140,8 @@
       "firstNamePlaceholder": "Enter your first name",
       "lastName": "Last name",
       "lastNamePlaceholder": "Enter your last name",
+      "phone": "Phone number",
+      "phonePlaceholder": "Enter your phone number",
       "submit": "Check Date",
       "errorTitle": "Error",
       "errorName": "Please enter your first and last name",
