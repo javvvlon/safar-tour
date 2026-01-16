@@ -14,12 +14,6 @@ const About = () => {
         t.about.features.support,
     ];
 
-    const stats = [
-        {icon: Users, value: "500+", label: t.about.stats.clients},
-        {icon: Globe, value: "50+", label: t.about.stats.countries},
-        {icon: Award, value: "10+", label: t.about.stats.experience},
-        {icon: ThumbsUp, value: "99%", label: t.about.stats.reviews},
-    ];
     return (
         <section
             id="haqimizda"
@@ -83,26 +77,6 @@ const About = () => {
                             ))}
                         </div>
                     </div>
-                </div>
-
-                {/* Stats Section */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
-                    {stats.map((stat, index) => (
-                        <motion.div
-                            key={index}
-                            className="bg-white p-6 rounded-2xl shadow-sm border border-border/50 text-center group hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
-                        >
-                            <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors duration-300">
-                                <stat.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
-                            </div>
-                            <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
-                                {stat.value}
-                            </div>
-                            <div className="text-muted-foreground text-sm">
-                                {stat.label}
-                            </div>
-                        </motion.div>
-                    ))}
                 </div>
             </div>
         </section>
