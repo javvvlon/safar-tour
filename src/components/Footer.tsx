@@ -1,7 +1,17 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube, Send } from "lucide-react";
 import { motion } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
 
 const Footer = () => {
+    const { t } = useLanguage();
+
+    const contactInfo = [
+        { icon: Phone, label: t.footer.phone, values: ["+998 (77) 265 26 00"] },
+        { icon: Mail, label: t.footer.email, values: ["info@safartravel.uz"] },
+        { icon: MapPin, label: t.footer.address, values: ["Farg'ona sh., Burxoniddin Marg'iloniy, 46A-uy"] },
+        { icon: Clock, label: t.footer.workHours, values: [t.footer.weekdays, t.footer.weekend] },
+    ];
+
     return (
         <footer
             id="aloqa"
@@ -21,28 +31,19 @@ const Footer = () => {
                         viewport={{once: true}}
                         transition={{duration: 0.6}}
                     >
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-4">
-              Aloqa
-            </span>
+                        <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium mb-4">
+                          {t.footer.badge}
+                        </span>
                         <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                            Biz bilan <span className="text-primary">bog'laning</span>
+                            {t.footer.title1} <span className="text-primary">{t.footer.title2}</span>
                         </h2>
                         <p className="text-white/60 max-w-xl text-lg">
-                            Savollaringiz bormi? Biz bilan bog'laning va biz sizga yordam beramiz!
+                            {t.footer.description}
                         </p>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {[
-                            {icon: Phone, label: "Telefon", values: ["+998 (77) 265 26 00"]},
-                            {icon: Mail, label: "Email", values: ["info@safartravel.uz"]},
-                            {icon: MapPin, label: "Manzil", values: ["Farg'ona sh., Burxoniddin Marg'iloniy, 46A-uy"]},
-                            {
-                                icon: Clock,
-                                label: "Ish vaqti",
-                                values: ["Dushanba - Shanba: 09:00 - 18:00", "Yakshanba: Dam olish kuni"],
-                            },
-                        ].map((item, index) => (
+                        {contactInfo.map((item, index) => (
                             <motion.div
                                 key={index}
                                 className="flex items-start gap-4 group"
@@ -75,7 +76,7 @@ const Footer = () => {
                         viewport={{once: true}}
                         transition={{duration: 0.6, delay: 0.4}}
                     >
-                        <p className="text-white/50 text-sm mb-4">Ijtimoiy tarmoqlarda</p>
+                        <p className="text-white/50 text-sm mb-4">{t.footer.socialMedia}</p>
                         <div className="flex gap-4">
                             {[Facebook, Instagram, Youtube, Send].map((Icon, index) => (
                                 <motion.a
@@ -105,7 +106,7 @@ const Footer = () => {
                             />
                         </div>
                         <p className="text-white/50 text-sm text-center">
-                            © 2026 Safar Travel. Barcha huquqlar himoyalangan.
+                            {t.footer.copyright}
                         </p>
                     </div>
                 </div>

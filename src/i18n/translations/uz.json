@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "services": "Xizmatlar",
+    "destinations": "Manzillar",
+    "about": "Biz haqimizda",
+    "contact": "Aloqa",
+    "callUs": "Qo'ng'iroq qiling",
+    "planTrip": "Sayohat rejalashtiring"
+  },
+  "hero": {
+    "title1": "Dunyoni",
+    "title2": "oson kashf eting",
+    "description": "Eng yaxshi turlar belgilangan narxda, yashirin to'lovlarsiz. Safar Travel bilan orzu sayohatingizni amalga oshiring.",
+    "findTour": "Tur topish",
+    "countries": "mamlakat",
+    "features": {
+      "allInclusive": "Hammasi kiradi",
+      "hotels": "4-5* mehmonxonalar",
+      "flexibleDates": "Moslashuvchan sanalar",
+      "fixedPrice": "Belgilangan narx"
+    }
+  },
+  "services": {
+    "badge": "Xizmatlarimiz",
+    "title1": "Bizning",
+    "title2": "xizmatlarimiz",
+    "description": "Safar Travel sizga sayohatingizni oson va qulaylashtirish uchun keng qamrovli xizmatlarni taqdim etadi",
+    "items": {
+      "flights": {
+        "title": "Aviachiptalar",
+        "description": "Eng yaxshi narxlarda aviachiptalarni bron qiling"
+      },
+      "hotels": {
+        "title": "Mehmonxonalar",
+        "description": "Dunyo bo'ylab eng yaxshi mehmonxonalarni tanlang"
+      },
+      "excursions": {
+        "title": "Ekskursiyalar",
+        "description": "Professional gidlar bilan qiziqarli sayohatlar"
+      },
+      "support": {
+        "title": "24/7 Yordam",
+        "description": "Har doim sizning xizmatingizdamiz"
+      },
+      "payment": {
+        "title": "Qulay to'lov",
+        "description": "Naqd va plastik kartalar orqali to'lov"
+      },
+      "insurance": {
+        "title": "Sug'urta",
+        "description": "Sayohat sug'urtasi bilan xavfsiz dam oling"
+      }
+    }
+  },
+  "destinations": {
+    "badge": "Mashhur yo'nalishlar",
+    "title1": "Mashhur",
+    "title2": "yo'nalishlar",
+    "description": "Bizning eng ko'p sotilgan sayohat yo'nalishlari bilan tanishing",
+    "viewAll": "Barcha yo'nalishlar",
+    "hot": "Mashhur",
+    "details": "Batafsil",
+    "days": "kun",
+    "items": {
+      "sharm": {
+        "country": "Misr",
+        "description": "Qizil dengiz sohilida go'zal kurortlar, snorkling va suv osti olamini kashf eting."
+      },
+      "thailand": {
+        "country": "Tailand",
+        "description": "Tropik orollar, ekzotik oshxona va boy madaniyat bilan tanishing."
+      },
+      "turkey": {
+        "country": "Turkiya",
+        "description": "O'rta er dengizi sohili, tarixiy joylar va mazali turkcha taomlari."
+      },
+      "dubai": {
+        "country": "BAA",
+        "description": "Zamonaviy me'morchilik, hashamatli savdo markazlari va cho'l safarilari."
+      },
+      "vietnam": {
+        "country": "Vetnam",
+        "description": "Chiroyli tabiat, tarixiy shaharlar va o'ziga xos Osiyo madaniyati."
+      }
+    }
+  },
+  "about": {
+    "badge": "Biz haqimizda",
+    "title1": "Nima uchun",
+    "title2": "Safar Travel?",
+    "description1": "Safar Travel - bu O'zbekistondagi eng ishonchli sayohat agentliklaridan biri. Biz 10 yildan ortiq vaqt davomida minglab insonlarga ularning orzu qilgan sayohatlarini amalga oshirishga yordam berdik.",
+    "description2": "Bizning professional jamoamiz har bir mijozga individual yondashuv bilan xizmat ko'rsatadi va sizning barcha talablaringiz va istaklaringizni hisobga olgan holda eng yaxshi takliflarni taqdim etadi.",
+    "floatingCard": "Yillik tajriba va minglab mamnun mijozlar",
+    "features": {
+      "experience": "10 yildan ortiq tajriba",
+      "quality": "Ishonchli va sifatli xizmat",
+      "prices": "Raqobatbardosh narxlar",
+      "personal": "Shaxsiy yondashuv",
+      "booking": "Tez va oson bron qilish",
+      "support": "24/7 mijozlarga yordam"
+    },
+    "stats": {
+      "clients": "Mamnun mijozlar",
+      "countries": "Mamlakatlar",
+      "experience": "Yillik tajriba",
+      "reviews": "Ijobiy fikrlar"
+    }
+  },
+  "footer": {
+    "badge": "Aloqa",
+    "title1": "Biz bilan",
+    "title2": "bog'laning",
+    "description": "Savollaringiz bormi? Biz bilan bog'laning va biz sizga yordam beramiz!",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Manzil",
+    "addressValue": "Toshkent sh., Amir Temur ko'chasi, 15-uy",
+    "workHours": "Ish vaqti",
+    "weekdays": "Dushanba - Shanba: 09:00 - 18:00",
+    "weekend": "Yakshanba: Dam olish kuni",
+    "socialMedia": "Ijtimoiy tarmoqlarda",
+    "copyright": "© 2026 Safar Travel. Barcha huquqlar himoyalangan."
+  }
+}

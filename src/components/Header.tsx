@@ -2,8 +2,12 @@ import { Menu, X, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLanguage } from "../i18n/LanguageContext";
+import LanguageSwitch from "./ui/language-switch";
 
 const Header = () => {
+    const { t } = useLanguage();
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -16,11 +20,11 @@ const Header = () => {
     }, []);
 
     const navLinks = [
-        { href: "#bosh-sahifa", label: "Bosh sahifa" },
-        { href: "#xizmatlar", label: "Xizmatlar" },
-        { href: "#manzillar", label: "Manzillar" },
-        { href: "#haqimizda", label: "Biz haqimizda" },
-        { href: "#aloqa", label: "Aloqa" },
+        { href: "#bosh-sahifa", label: t.nav.home },
+        { href: "#xizmatlar", label: t.nav.services },
+        { href: "#manzillar", label: t.nav.destinations },
+        { href: "#haqimizda", label: t.nav.about },
+        { href: "#aloqa", label: t.nav.contact },
     ];
 
     return (
@@ -66,29 +70,32 @@ const Header = () => {
                     ))}
                 </nav>
 
-                {/* Phone + CTA */}
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden md:flex items-center gap-4">
                     <div className={`flex items-center gap-2 text-sm transition-all duration-500 ${isScrolled ? "hidden lg:flex" : "flex"}`}>
                         <Phone className="w-4 h-4 text-primary" />
                         <div className="text-right">
-                            <p className="text-xs text-muted-foreground">Qo'ng'iroq qiling</p>
+                            <p className="text-xs text-muted-foreground">{t.nav.callUs}</p>
                             <p className="font-semibold text-foreground">+998 77 265 26 00</p>
                         </div>
                     </div>
+                    <LanguageSwitch />
                     <Button className={`bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-md hover:shadow-lg transition-all ${
                         isScrolled ? "px-4 py-2 text-sm" : ""
                     }`}>
-                        Sayohat rejalashtiring
+                        {t.nav.planTrip}
                     </Button>
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-foreground p-2"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                >
-                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                <div className="md:hidden flex items-center gap-2">
+                    <LanguageSwitch variant="compact" />
+                    <button
+                        className="text-foreground p-2"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    >
+                        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Navigation */}
@@ -116,7 +123,7 @@ const Header = () => {
                                 </motion.a>
                             ))}
                             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground w-full rounded-xl">
-                                Sayohat rejalashtiring
+                                {t.nav.planTrip}
                             </Button>
                         </div>
                     </motion.nav>

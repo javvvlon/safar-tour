@@ -1,15 +1,18 @@
 import { ArrowRight, Plane, Hotel, Calendar, DollarSign } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
-
-const features = [
-    { icon: Plane, label: "Hammasi kiradi" },
-    { icon: Hotel, label: "4-5* mehmonxonalar" },
-    { icon: Calendar, label: "Moslashuvchan sanalar" },
-    { icon: DollarSign, label: "Belgilangan narx" },
-];
+import { useLanguage } from "../i18n/LanguageContext";
 
 const Hero = () => {
+    const { t } = useLanguage();
+
+    const features = [
+        { icon: Plane, label: t.hero.features.allInclusive },
+        { icon: Hotel, label: t.hero.features.hotels },
+        { icon: Calendar, label: t.hero.features.flexibleDates },
+        { icon: DollarSign, label: t.hero.features.fixedPrice },
+    ];
+
     return (
         <section
             id="bosh-sahifa"
@@ -67,9 +70,9 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
                         >
-                            Dunyoni
+                            {t.hero.title1}
                             <br />
-                            <span className="text-primary">oson kashf eting</span>
+                            <span className="text-primary">{t.hero.title2}</span>
                         </motion.h1>
 
                         <motion.p
@@ -78,8 +81,7 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
                         >
-                            Eng yaxshi turlar belgilangan narxda, yashirin to'lovlarsiz.
-                            Safar Travel bilan orzu sayohatingizni amalga oshiring.
+                            {t.hero.description}
                         </motion.p>
 
                         <motion.div
@@ -91,7 +93,7 @@ const Hero = () => {
                                 size="lg"
                                 className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-7 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group"
                             >
-                                Tur topish
+                                {t.hero.findTour}
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Button>
                         </motion.div>
@@ -120,7 +122,7 @@ const Hero = () => {
                             className="absolute top-4 right-4 lg:top-8 lg:right-0 bg-foreground text-background rounded-full w-20 h-20 lg:w-24 lg:h-24 flex flex-col items-center justify-center shadow-xl animate-float"
                         >
                             <span className="text-2xl lg:text-3xl font-bold">50+</span>
-                            <span className="text-xs lg:text-sm">mamlakat</span>
+                            <span className="text-xs lg:text-sm">{t.hero.countries}</span>
                         </motion.div>
                     </motion.div>
                 </div>

@@ -1,0 +1,125 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "destinations": "Destinations",
+    "about": "About Us",
+    "contact": "Contact",
+    "callUs": "Call us",
+    "planTrip": "Plan your trip"
+  },
+  "hero": {
+    "title1": "Discover the world",
+    "title2": "easily",
+    "description": "Best tours at fixed prices, no hidden fees. Make your dream trip come true with Safar Travel.",
+    "findTour": "Find a tour",
+    "countries": "countries",
+    "features": {
+      "allInclusive": "All inclusive",
+      "hotels": "4-5* hotels",
+      "flexibleDates": "Flexible dates",
+      "fixedPrice": "Fixed price"
+    }
+  },
+  "services": {
+    "badge": "Our services",
+    "title1": "Our",
+    "title2": "services",
+    "description": "Safar Travel provides comprehensive services to make your travel easy and comfortable",
+    "items": {
+      "flights": {
+        "title": "Flight tickets",
+        "description": "Book flight tickets at the best prices"
+      },
+      "hotels": {
+        "title": "Hotels",
+        "description": "Choose the best hotels worldwide"
+      },
+      "excursions": {
+        "title": "Excursions",
+        "description": "Exciting tours with professional guides"
+      },
+      "support": {
+        "title": "24/7 Support",
+        "description": "We are always at your service"
+      },
+      "payment": {
+        "title": "Easy payment",
+        "description": "Cash and card payment available"
+      },
+      "insurance": {
+        "title": "Insurance",
+        "description": "Travel safely with travel insurance"
+      }
+    }
+  },
+  "destinations": {
+    "badge": "Popular destinations",
+    "title1": "Popular",
+    "title2": "destinations",
+    "description": "Discover our best-selling travel destinations",
+    "viewAll": "All destinations",
+    "hot": "Hot",
+    "details": "Details",
+    "days": "days",
+    "items": {
+      "sharm": {
+        "country": "Egypt",
+        "description": "Discover beautiful resorts on the Red Sea coast, snorkeling and the underwater world."
+      },
+      "thailand": {
+        "country": "Thailand",
+        "description": "Experience tropical islands, exotic cuisine and rich culture."
+      },
+      "turkey": {
+        "country": "Turkey",
+        "description": "Mediterranean coast, historical sites and delicious Turkish cuisine."
+      },
+      "dubai": {
+        "country": "UAE",
+        "description": "Modern architecture, luxury shopping malls and desert safaris."
+      },
+      "vietnam": {
+        "country": "Vietnam",
+        "description": "Beautiful nature, historic cities and unique Asian culture."
+      }
+    }
+  },
+  "about": {
+    "badge": "About us",
+    "title1": "Why",
+    "title2": "Safar Travel?",
+    "description1": "Safar Travel is one of the most trusted travel agencies in Uzbekistan. For over 10 years, we have helped thousands of people make their dream trips come true.",
+    "description2": "Our professional team serves each client with an individual approach and offers the best deals taking into account all your requirements and preferences.",
+    "floatingCard": "Years of experience and thousands of satisfied customers",
+    "features": {
+      "experience": "Over 10 years of experience",
+      "quality": "Reliable and quality service",
+      "prices": "Competitive prices",
+      "personal": "Personal approach",
+      "booking": "Fast and easy booking",
+      "support": "24/7 customer support"
+    },
+    "stats": {
+      "clients": "Satisfied clients",
+      "countries": "Countries",
+      "experience": "Years of experience",
+      "reviews": "Positive reviews"
+    }
+  },
+  "footer": {
+    "badge": "Contact",
+    "title1": "Get in",
+    "title2": "touch",
+    "description": "Have questions? Contact us and we will help you!",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "addressValue": "Tashkent, Amir Temur str., 15",
+    "workHours": "Working hours",
+    "weekdays": "Monday - Saturday: 09:00 - 18:00",
+    "weekend": "Sunday: Closed",
+    "socialMedia": "Follow us",
+    "copyright": "© 2026 Safar Travel. All rights reserved."
+  }
+}

@@ -2,60 +2,7 @@ import { MapPin, Clock, Star, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
 import { motion } from "framer-motion";
-
-const destinations = [
-    {
-        name: "Sharm el Sheikh",
-        country: "Misr",
-        image: "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&h=400&fit=crop",
-        price: "450",
-        duration: "7 kun",
-        rating: 4.8,
-        description: "Qizil dengiz sohilida go'zal kurortlar, snorkling va suv osti olamini kashf eting.",
-        hot: true,
-    },
-    {
-        name: "Tailand",
-        country: "Tailand",
-        image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&h=400&fit=crop",
-        price: "850",
-        duration: "10 kun",
-        rating: 4.9,
-        description: "Tropik orollar, ekzotik oshxona va boy madaniyat bilan tanishing.",
-        hot: false,
-    },
-    {
-        name: "Turkiya",
-        country: "Turkiya",
-        image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=600&h=400&fit=crop",
-        price: "350",
-        duration: "7 kun",
-        rating: 4.7,
-        description: "O'rta er dengizi sohili, tarixiy joylar va mazali turkcha taomlari.",
-        hot: true,
-    },
-    {
-        name: "Dubai",
-        country: "BAA",
-        image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
-        price: "750",
-        duration: "5 kun",
-        rating: 4.9,
-        description: "Zamonaviy me'morchilik, hashamatli savdo markazlari va cho'l safarilari.",
-        hot: false,
-    },
-    {
-        name: "Vietnam",
-        country: "Vetnam",
-        image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop",
-        price: "700",
-        duration: "12 kun",
-        rating: 4.8,
-        description: "Chiroyli tabiat, tarixiy shaharlar va o'ziga xos Osiyo madaniyati.",
-        hot: false,
-    },
-];
-
+import { useLanguage } from "../i18n/LanguageContext";
 const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -74,6 +21,61 @@ const cardVariants = {
 };
 
 const Destinations = () => {
+    const { t } = useLanguage();
+
+    const destinations = [
+        {
+            name: "Sharm el Sheikh",
+            country: t.destinations.items.sharm.country,
+            image: "https://images.unsplash.com/photo-1539768942893-daf53e448371?w=600&h=400&fit=crop",
+            price: "450",
+            duration: 7,
+            rating: 4.8,
+            description: t.destinations.items.sharm.description,
+            hot: true,
+        },
+        {
+            name: "Thailand",
+            country: t.destinations.items.thailand.country,
+            image: "https://images.unsplash.com/photo-1528181304800-259b08848526?w=600&h=400&fit=crop",
+            price: "850",
+            duration: 10,
+            rating: 4.9,
+            description: t.destinations.items.thailand.description,
+            hot: false,
+        },
+        {
+            name: "Turkey",
+            country: t.destinations.items.turkey.country,
+            image: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=600&h=400&fit=crop",
+            price: "350",
+            duration: 7,
+            rating: 4.7,
+            description: t.destinations.items.turkey.description,
+            hot: true,
+        },
+        {
+            name: "Dubai",
+            country: t.destinations.items.dubai.country,
+            image: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop",
+            price: "750",
+            duration: 5,
+            rating: 4.9,
+            description: t.destinations.items.dubai.description,
+            hot: false,
+        },
+        {
+            name: "Vietnam",
+            country: t.destinations.items.vietnam.country,
+            image: "https://images.unsplash.com/photo-1528127269322-539801943592?w=600&h=400&fit=crop",
+            price: "700",
+            duration: 12,
+            rating: 4.8,
+            description: t.destinations.items.vietnam.description,
+            hot: false,
+        },
+    ];
+
     return (
         <section id="manzillar" className="py-24 bg-background relative overflow-hidden">
             {/* Background Decoration */}
@@ -88,21 +90,21 @@ const Destinations = () => {
                     transition={{ duration: 0.6 }}
                 >
                     <div>
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
-              Mashhur yo'nalishlar
-            </span>
+                        <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                          {t.destinations.badge}
+                        </span>
                         <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
-                            Mashhur <span className="text-primary">yo'nalishlar</span>
+                            {t.destinations.title1} <span className="text-primary">{t.destinations.title2}</span>
                         </h2>
                         <p className="text-muted-foreground max-w-xl text-lg">
-                            Bizning eng ko'p sotilgan sayohat yo'nalishlari bilan tanishing
+                            {t.destinations.description}
                         </p>
                     </div>
                     <Button
                         variant="outline"
                         className="mt-6 md:mt-0 border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-xl group"
                     >
-                        Barcha yo'nalishlar
+                        {t.destinations.viewAll}
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
                 </motion.div>
@@ -133,7 +135,7 @@ const Destinations = () => {
                                     {/* Hot Badge */}
                                     {destination.hot && (
                                         <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold uppercase animate-pulse">
-                                            🔥 Mashhur
+                                            🔥 {t.destinations.hot}
                                         </div>
                                     )}
 
@@ -157,13 +159,13 @@ const Destinations = () => {
                                     <div className="flex items-center justify-between pt-4 border-t border-border">
                                         <div className="flex items-center gap-2 text-muted-foreground text-sm">
                                             <Clock className="w-4 h-4" />
-                                            {destination.duration}
+                                            {destination.duration} {t.destinations.days}
                                         </div>
                                         <Button
                                             size="sm"
                                             className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl group/btn"
                                         >
-                                            Batafsil
+                                            {t.destinations.details}
                                             <ArrowRight className="ml-1 w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
                                         </Button>
                                     </div>
